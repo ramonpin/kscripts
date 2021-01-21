@@ -31,11 +31,11 @@ info.setProperty("lex", "JAVA")
 
 val connection = DriverManager.getConnection("jdbc:calcite:", info)!!
 val calciteConnection = connection.unwrap(CalciteConnection::class.java)!!
-val rootSchema = calciteConnection.rootSchema!!
+val rootSchema = calciteConnection.rootSchema
 val schema = ReflectiveSchema(HrSchema)
 rootSchema.add("hr", schema)
 
-val statement = connection.createStatement()!!
+val statement = connection.createStatement()
 val query =    
 """select d.id, avg(e.age) as edad_media 
   | from hr.emps as e

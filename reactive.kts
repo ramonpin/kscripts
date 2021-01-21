@@ -1,4 +1,4 @@
-@file:DependsOn("io.reactivex.rxjava2:rxkotlin:2.2.0")
+@file:DependsOnMaven("io.reactivex.rxjava2:rxkotlin:2.2.0")
 
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
